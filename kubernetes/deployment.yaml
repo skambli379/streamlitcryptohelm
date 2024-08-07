@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-visualizer
+  labels:
+    app: crypto-visualizer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crypto-visualizer
+  template:
+    metadata:
+      labels:
+        app: crypto-visualizer
+    spec:
+      containers:
+      - name: crypto-visualizer
+        image: saurabhkambli/crypto-visualizer:latest
+        ports:
+        - containerPort: 8501
