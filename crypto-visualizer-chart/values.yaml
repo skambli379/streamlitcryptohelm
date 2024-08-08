@@ -5,12 +5,12 @@
 replicaCount: 1
 
 image:
-  repository: saurabhkambli/crypto-visualizer
+  repository: myacrregistrysk08.azurecr.io/streamlit-app1
   tag: latest
   pullPolicy: Always
 
 imagePullSecrets: 
-  - name: myregistrykey
+  - name: acr-secret
 nameOverride: ""
 fullnameOverride: ""
 
